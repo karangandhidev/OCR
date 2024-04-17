@@ -1,0 +1,20 @@
+{% extends 'create.html' %}
+{% block replace %}
+<div style="text-align: center;">
+{#<div class="jumbotron">#}
+{#  <h1 class="display-4">Welcome to DataFlair<br>Hello {{ user_pr.fname }}</h1>#}
+{#  <p class="lead">its an awesome profile picture</p>#}
+{#  <hr class="my-4">#}
+<style> textarea{resize:None;width:685px; height:700px;max-height:700px; max-width:685px; align:right}</style>
+<p>Details.html called</p>
+  <embed src="{{ user_pr.upload.url }}"  type="application/pdf" width="685px" height="700px" max-height="700px" max-width="685px" align="left"/>
+        <textarea >{% autoescape off %}{{ file_data }}{% endautoescape %}</textarea>
+<audio controls>
+  <source src="http://127.0.0.1:8000/media/{{ audio }}" type="audio/mpeg">
+{#  <source src="/a" type="audio/mpeg">#}
+Your browser does not support the audio element.
+</audio>
+
+</div>
+</div>
+{% endblock %}

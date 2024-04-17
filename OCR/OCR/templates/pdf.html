@@ -1,0 +1,11 @@
+{% extends 'create.html' %}
+{% block replace %}
+<div style="text-align: center;">
+
+<p>pdf.html called</p>
+  <embed src="{{ location }}"  type="application/pdf" width="685px" height="700px" max-height="700px" max-width="685px" align="left"/>
+
+    <textarea width="685px" height="700px" max-height="700px" max-width="685px" align="right">{% autoescape off %}{{ data }}{% endautoescape %}</textarea>
+</div>
+</div>
+{% endblock %}

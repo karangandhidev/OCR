@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OCR</title>
+    </head>
+    <body>
+{#    <link rel="stylesheet" href="../static/upload.css">#}
+                        {% block replace %}
+                <form method="POST" enctype="multipart/form-data">
+                    <!-- Very Important csrf Token -->
+                    {% csrf_token %}
+                    <table>
+                        {{ form.as_table }}
+                    </table>
+{#                <label for="apply"><input type="file" name="" id="apply" accept="image/*,.pdf">Get file</label>#}
+                    <input type="submit">
+                </form>
+        {% endblock %}
+    </body>
+</html>
